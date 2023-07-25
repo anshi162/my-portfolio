@@ -1,0 +1,67 @@
+.work{
+    text-align: center;
+    padding: 5%;
+}
+.name{
+    font-size: 1.2rem;
+    text-align: center;
+    color: aliceblue;
+    padding-bottom: 10%; 
+}
+h1{
+    font-family:sans-serif;
+}
+span{
+    color: rgb(75, 29, 118);
+}
+img{
+    padding: 3%;
+    height: 300px;
+    width: 100%;
+}
+.proj-container{
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 40px;
+    padding-bottom: 5rem;
+}
+.proj-card{
+    background-color:rgba(181, 126, 181, 0.2);
+    border-radius: 5%;
+    padding: 1rem ;
+    box-shadow: 0px 0px 25px rgb(238, 233, 233);
+}
+.proj-title{
+    color: aliceblue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2px;
+}
+.proj-detail p{
+    color: aliceblue;
+    padding: 2px;
+}
+.proj-btns{
+    padding: 5%;
+}
+.btn{
+    background-color: aliceblue;
+    border-radius:10% ;
+    padding: 10px;
+}
+@media screen and (max-width:1140px) {
+    .work{
+        padding: 10%;
+    }
+    .proj-container{
+        width: 70%;
+        grid-template-columns: 1fr;
+        margin:auto;
+        padding: 1rem 1rem;
+        grid-gap: 50px;
+        }
+    .proj-card{
+        padding:1rem;
+    }
+}

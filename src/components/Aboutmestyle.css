@@ -1,0 +1,137 @@
+.me{
+    padding-top: 8%;
+    width: 100%;
+    height: 250vh;
+}
+.me .introduce{
+    max-width: 1140px;
+     top:10px;
+     display: grid;
+     grid-template-columns: 900px 400px ;
+     grid-gap:10px;
+ }
+ .introduce .written{
+     height: 100%;
+     max-width: 100%;
+     margin-left: 100px;
+     display: flex;
+     text-align: justify;
+     flex-direction: column;
+     padding: 1rem;
+ }
+ 
+.introduce .written .h2{
+     color: rgb(124, 4, 124);
+     font-size: 3rem;
+     font: bold;
+     text-align: center;
+     font-weight: 500;
+ }
+ .introduce .written .who{
+    font-size: 1.3rem;
+    padding-top: 5%;
+ }
+ .who span{
+    color: rgb(145, 60, 225);
+    font-weight: 500;
+    font-size: 1.6rem;
+ }
+ .me .skill{
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+.skill span{
+    font-size: 2.5rem;
+    color: rgb(97, 23, 161);
+    font-weight: 700;
+}
+
+ .skill .head{
+    text-align: center;
+    color: aliceblue;
+    font-size: 2.5rem;
+ }
+
+ .skill .container1{
+    padding: 5%;
+    display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-gap: 40px;
+        margin: 5%;
+        margin-top: 2%;
+
+ }
+ .card{
+    border: 2px solid white;
+    padding: 20%;
+    border-radius: 5%;
+    box-shadow: 0px 0px 20px rgb(123, 123, 212);
+ }
+ .me .edu{
+    padding-top: 5%;
+    text-align: center;
+ } 
+ .edu .head2{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 5px;
+ }
+ .edu .education{
+    padding-top: 1%;
+    height: 450px;
+    border-radius: 1%;
+    margin: auto;
+    width: 80%;
+    box-shadow: 0px 0px 20px white;
+ }
+ .education dl{
+    text-align: center;
+    color: aliceblue;
+    font-size: 1.2rem;
+    padding: 2%;
+ }
+ .edu .vertical{
+    border-left: 3px solid rgb(232, 220, 220);
+    height: 400px;
+    position: absolute;
+    left: 12%;
+  }
+ @media screen and (max-width:1140px) {
+    .me{
+        width:100vh;
+        height: 320vh;
+    }
+    .me .introduce{
+        display: grid;
+        margin: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 400px;
+        grid-gap: 40px;
+        justify-items: center;
+        }
+    .introduce .written .h2{
+        text-align: left;
+        font-size: 2.5rem;
+      }
+      .skill .container1{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 40px;
+        margin: 10%;
+        margin-top: 2%;
+      }
+      .edu .education{
+        padding-top: 1%;
+        height: 420px;
+      }
+      .education .dl{
+        padding: 5%;
+      }
+      .edu .vertical{
+        border-left: 3px solid rgb(232, 220, 220);
+        height: 400px;
+        position: absolute;
+        left: 12%;
+      }
+ }
