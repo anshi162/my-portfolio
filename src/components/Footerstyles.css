@@ -60,6 +60,7 @@
 @media screen and (max-width:1140px){
     .footer{
         height: 120vh;
+        padding-bottom: 50px;
         
     }
      .footer .introduce{
@@ -82,5 +83,6 @@
     }
     .footer .btn{
         margin-left: 40%;
+        margin-bottom: 10%;
     }
 }

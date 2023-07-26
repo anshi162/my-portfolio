@@ -1,7 +1,7 @@
 .findme{
     width: 100%;
     height: 150vh;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 .findme .mail{
     text-align:center;
@@ -69,6 +69,10 @@ input[type=text],[type=email], textarea{
   }
   
 @media screen and (max-width:1140px) {
+    .findme{
+        padding-top: 20%;
+        height: auto;
+    }
     .findme .mail .h1 p{
         font-size: 4rem;
     }

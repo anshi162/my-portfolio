@@ -99,8 +99,7 @@
   }
  @media screen and (max-width:1140px) {
     .me{
-        width:100vh;
-        height: 320vh;
+        height: auto;
     }
     .me .introduce{
         display: grid;
