@@ -65,7 +65,7 @@
      .footer .introduce{
         display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 300px 400px;
+      grid-template-rows: 500px 400px;
      grid-gap: 10px;
   justify-items: center;
         }
