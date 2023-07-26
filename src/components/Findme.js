@@ -10,7 +10,7 @@ const findme = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_5vcyy3m', 'template_kweg2lq', e.target, 'C2XEpAZLTscYSx0By')
+    emailjs.sendForm('service_jhrl1bb','template_uyb7crh',e.target,'tlIxYr_K1M5htj2jg')
       .then((result) => {
           console.log(result.text);
       }, (error) => {

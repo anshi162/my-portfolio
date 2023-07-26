@@ -34,10 +34,11 @@
     left: 50%;
     text-align: center;
 }
-.hero .content h1{
+.hero .content .type{
     font-size: 3rem;
     padding: 0.6rem 0 1.5rem;
-    color: rgb(79, 147, 164);
+    color: rgb(99, 4, 130);
+    font-weight: 600;
 }
 .hero .content h2{
     font-size: 4rem;
@@ -67,10 +68,9 @@ padding-bottom: 100px;
         left: 50%;
         text-align: center;
     }
-    .hero .content h1{
+    .hero .content .type{
         font-size: 3rem;
-       
-        color: rgb(79, 147, 164);
+        color: rgb(253, 253, 253);
     }
     .hero .content h2{
         font-size: 4rem;
