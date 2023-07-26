@@ -24,7 +24,7 @@
     font-size: 1.4rem;
     font-weight: 500;
 }
-ul li:hover{
+ul li a:hover{
     text-decoration: underline rgb(196, 117, 238) solid 5px ;
 }
 .hamburger{

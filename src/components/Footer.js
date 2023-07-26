@@ -10,17 +10,17 @@ const Footer = () => {
         <div className="introduce">
             <div className="written">
                 <p className="h2">Let me introduce myself</p>
-                <ul className="list1">
-                <li>
+                <dl className="list1">
+                <dd>
                    I weild good web development skills.
-                </li><br/>
-                <li>
+                </dd><br/>
+                <dd>
                     A problem solver with Technical proficiency in <span>Python</span> and <span>C++</span>.
-                </li><br/>
-                <li>
+                </dd><br/>
+                <dd>
                 My field of Interest's are building new  <span>Web Technologies and Products</span>
-                </li>
-                </ul>
+                </dd>
+                </dl>
                 </div>
 
             <div className="face">

@@ -34,6 +34,10 @@
   color: aliceblue;
   font-size: 1.5rem;
 }
+.list1:hover{
+    text-decoration: none !important;
+}
+
 .list1 span{
     color: rgb(19, 1, 216);
     font:bold;
