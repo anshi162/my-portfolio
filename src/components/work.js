@@ -4,6 +4,7 @@ import savi from '../images/savi.jpg'
 import { NavLink } from 'react-router-dom'
 import intro from '../images/intro.jpg'
 import intel from '../images/intell.jpg'
+import login from '../images/login.png'
 
 const work = () => {
   return (
@@ -25,7 +26,7 @@ const work = () => {
                 </div>
         </div>
         <div className='proj-card'>
-            <img src={intel} alt='savicare'/>
+            <img src={intel} alt='intefarming'/>
             <h2 className='proj-title'>Intelligent Farming</h2>
             <div className='proj-detail'>
                 <p>Machine learning based system which predicts best kind of
@@ -33,6 +34,17 @@ const work = () => {
                 </div>
                 <div className='proj-btns'>
                     <NavLink to="https://github.com/anshi162/Intelligent_farming" className="btn">View</NavLink>
+                </div>
+        </div>
+        <div className='proj-card'>
+            <img src={login} alt='login'/>
+            <h2 className='proj-title'>Animated Login Page</h2>
+            <div className='proj-detail'>
+                <p>A login page created using Html, Css and Javascript in which button moves when
+                invalid input is provided.</p>
+                </div>
+                <div className='proj-btns'>
+                    <NavLink to="https://github.com/anshi162/animated_loginpage" className="btn">View</NavLink>
                 </div>
         </div>
         </div>
