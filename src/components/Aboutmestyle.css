@@ -1,0 +1,197 @@
+.me{
+    padding-top: 8%;
+    width: 100%;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.me .introduce{
+    max-width: 1140px;
+     top:10px;
+     display: grid;
+     grid-template-columns: 900px 400px ;
+     grid-gap:10px;
+ }
+ .introduce .written{
+     height: 100%;
+     max-width: 100%;
+     margin-left: 100px;
+     display: flex;
+     text-align: justify;
+     flex-direction: column;
+     padding: 1rem;
+ }
+ 
+.introduce .written .h2{
+     color: rgb(242, 234, 16);
+     font-size: 3rem;
+     font: bold;
+     text-align: center;
+     font-weight: 500;
+ }
+ .introduce .written .who{
+    font-size: 1.3rem;
+    padding-top: 5%;
+ }
+ .who span{
+    color: rgb(239, 232, 9);
+    font-weight: 500;
+    font-size: 1.6rem;
+ }
+ .me .skill{
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+.skill span{
+    font-size: 2.5rem;
+    color: rgb(243, 243, 5);
+    font-weight: 700;
+}
+
+ .skill .head{
+    text-align: center;
+    color: aliceblue;
+    font-size: 2.5rem;
+ }
+
+ .skill .container1{
+    padding: 5%;
+    display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-gap: 40px;
+        margin: 5%;
+        margin-top: 2%;
+
+ }
+ .card{
+    border: 2px solid white;
+    padding: 20%;
+    border-radius: 5%;
+    box-shadow: 0px 0px 20px rgb(123, 123, 212);
+    position: relative;
+    cursor: pointer;
+ }
+ .skill-name {
+    visibility: hidden;
+    width: max-content;
+    background-color: rgb(123, 123, 212);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+ }
+ .card:hover .skill-name {
+    visibility: visible;
+    opacity: 1;
+ }
+ .me .edu{
+    padding-top: 5%;
+    text-align: center;
+ } 
+ .edu .head2{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 5px;
+ }
+ .edu .education{
+    padding: 2% 40px;
+    min-height: 450px;
+    height: auto;
+    border-radius: 1%;
+    margin: auto;
+    width: fit-content;
+    max-width: 90%;
+    box-shadow: 0px 0px 20px white;
+    position: relative;
+ }
+ .exp-section {
+    margin-bottom: 40px;
+    padding: 0 20px;
+ }
+ .section-head {
+    font-size: 2rem;
+    color: rgb(228, 240, 4);
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+ }
+ .education dl{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    font-size: 1.2rem;
+    padding: 2%;
+    max-width: 800px;
+    margin: 0 auto;
+ }
+ .job-role {
+    color: #FFFF00;
+    font-weight: bold;
+ }
+ .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+ }
+ .job-date {
+    color: aliceblue;
+ }
+ .education dd {
+    text-align: center;
+    width: 100%;
+ }
+ .edu .vertical{
+    display: none;
+ }
+ @media screen and (max-width:1140px) {
+    .me{
+        height: auto;
+    }
+    .me .introduce{
+        display: grid;
+        margin: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 400px;
+        grid-gap: 40px;
+        justify-items: center;
+        }
+    .introduce .written .h2{
+        text-align: left;
+        font-size: 2.5rem;
+      }
+      .skill .container1{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 40px;
+        margin: 10%;
+        margin-top: 2%;
+      }
+      .edu .education{
+        padding-top: 1%;
+        height: 420px;
+      }
+      .education .dl{
+        padding: 5%;
+      }
+      .edu .vertical{
+        border-left: 3px solid rgb(232, 220, 220);
+        height: 400px;
+        position: absolute;
+        left: 12%;
+      }
+ }
