@@ -1,197 +1,263 @@
 .me{
-    padding-top: 8%;
+    padding: 9rem 2rem 4rem;
     width: 100%;
     min-height: 100vh;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
 }
 .me .introduce{
-    max-width: 1140px;
-     top:10px;
-     display: grid;
-     grid-template-columns: 900px 400px ;
-     grid-gap:10px;
- }
- .introduce .written{
-     height: 100%;
-     max-width: 100%;
-     margin-left: 100px;
-     display: flex;
-     text-align: justify;
-     flex-direction: column;
-     padding: 1rem;
- }
- 
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: .35fr 1fr .55fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+.about-index{
+    color: var(--accent-cyan);
+    font-size: .68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    align-self: start;
+}
+.introduce .written{
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+}
 .introduce .written .h2{
-     color: rgb(242, 234, 16);
-     font-size: 3rem;
-     font: bold;
-     text-align: center;
-     font-weight: 500;
- }
- .introduce .written .who{
+    color: var(--accent-cyan);
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: left;
+}
+.section-kicker{
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-size: .68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    margin-bottom: .5rem;
+}
+.about-disciplines{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    margin-top: 1.4rem;
+}
+.about-disciplines span{
+    border: 1px solid rgba(74, 214, 229, 0.22);
+    border-radius: 999px;
+    padding: .5rem .85rem;
+    color: var(--ice-dim);
+    font-size: .78rem;
+}
+.introduce .written .who{
+    font-size: 1.1rem;
+    color: var(--ice-dim);
+    line-height: 1.7;
+    padding-top: 1.2rem;
+}
+.who p:first-child{
+    color: var(--ice);
     font-size: 1.3rem;
-    padding-top: 5%;
- }
- .who span{
-    color: rgb(239, 232, 9);
-    font-weight: 500;
-    font-size: 1.6rem;
- }
- .me .skill{
-    padding-top: 50px;
+}
+.who span{
+    color: var(--accent-cyan);
+    font-weight: 600;
+}
+.about-monogram{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 15rem;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    border-radius: .6rem;
+    background: linear-gradient(135deg, rgba(76, 95, 238, 0.2), rgba(74, 214, 229, 0.07));
+    backdrop-filter: blur(24px);
+}
+.about-monogram span{
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-weight: 700;
+    text-align: center;
+    color: var(--ice);
+}
+.about-monogram span:last-child{
+    color: var(--accent-cyan);
+    transform: translateY(1rem);
+}
+
+.me .skill{
+    padding-top: 5rem;
+    max-width: 1140px;
+    margin: 0 auto;
     width: 100%;
     text-align: center;
 }
-.skill span{
-    font-size: 2.5rem;
-    color: rgb(243, 243, 5);
-    font-weight: 700;
-}
-
- .skill .head{
+.skill .head{
     text-align: center;
-    color: aliceblue;
-    font-size: 2.5rem;
- }
-
- .skill .container1{
-    padding: 5%;
+    color: var(--ice);
+    font-family: var(--font-display);
+    font-size: 2rem;
+}
+.skill .head span{
+    color: var(--accent-cyan);
+}
+.skill .container1{
+    padding-top: 2.5rem;
     display: grid;
-        grid-template-columns: repeat(5,1fr);
-        grid-gap: 40px;
-        margin: 5%;
-        margin-top: 2%;
-
- }
- .card{
-    border: 2px solid white;
-    padding: 20%;
-    border-radius: 5%;
-    box-shadow: 0px 0px 20px rgb(123, 123, 212);
+    grid-template-columns: repeat(5,1fr);
+    gap: 1.4rem;
+}
+.card{
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px) saturate(140%);
+    border-radius: var(--radius);
+    padding: 1.8rem 1rem;
     position: relative;
     cursor: pointer;
- }
- .skill-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .25s, border-color .25s;
+}
+.card svg{
+    width: 44px !important;
+    height: 44px !important;
+    color: var(--ice-dim) !important;
+    transition: color .25s;
+}
+.card:hover{
+    transform: translateY(-4px);
+    border-color: rgba(74, 214, 229, 0.4);
+}
+.card:hover svg{
+    color: var(--accent-cyan) !important;
+}
+.skill-name {
     visibility: hidden;
     width: max-content;
-    background-color: rgb(123, 123, 212);
-    color: #fff;
+    background-color: var(--canvas-raised);
+    border: 1px solid var(--glass-border);
+    color: var(--ice);
     text-align: center;
     border-radius: 6px;
     padding: 5px 10px;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
+    bottom: 108%;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s;
-    font-size: 1rem;
+    font-size: .85rem;
     font-weight: 500;
     white-space: nowrap;
- }
- .card:hover .skill-name {
+}
+.card:hover .skill-name {
     visibility: visible;
     opacity: 1;
- }
- .me .edu{
-    padding-top: 5%;
+}
+
+.me .edu{
+    padding-top: 4.5rem;
+    max-width: 1140px;
+    margin: 0 auto;
     text-align: center;
- } 
- .edu .head2{
-    font-size: 3rem;
+}
+.edu .head2{
+    font-family: var(--font-display);
+    font-size: 2rem;
     text-align: center;
-    margin-bottom: 5px;
- }
- .edu .education{
-    padding: 2% 40px;
-    min-height: 450px;
-    height: auto;
-    border-radius: 1%;
+    margin-bottom: 1.5rem;
+}
+.edu .education{
+    padding: 2.5rem 3rem;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px) saturate(140%);
+    border-radius: var(--radius);
     margin: auto;
     width: fit-content;
     max-width: 90%;
-    box-shadow: 0px 0px 20px white;
     position: relative;
- }
- .exp-section {
-    margin-bottom: 40px;
-    padding: 0 20px;
- }
- .section-head {
-    font-size: 2rem;
-    color: rgb(228, 240, 4);
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
- }
- .education dl{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: aliceblue;
-    font-size: 1.2rem;
-    padding: 2%;
-    max-width: 800px;
-    margin: 0 auto;
- }
- .job-role {
-    color: #FFFF00;
-    font-weight: bold;
- }
- .job-header {
+}
+.job-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     text-align: left;
- }
- .job-date {
-    color: aliceblue;
- }
- .education dd {
+    gap: 1rem;
+}
+.job-role {
+    color: var(--accent-cyan);
+    font-weight: 700;
+}
+.job-date {
+    color: var(--ice-faint);
+    font-size: .9rem;
+    white-space: nowrap;
+}
+.education dl{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--ice-dim);
+    font-size: 1.05rem;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: .3rem;
+}
+.education dd {
     text-align: center;
     width: 100%;
- }
- .edu .vertical{
+}
+.education dd b{
+    color: var(--ice);
+}
+.edu .vertical{
     display: none;
- }
- @media screen and (max-width:1140px) {
-    .me{
-        height: auto;
-    }
+}
+
+@media screen and (max-width:1140px) {
     .me .introduce{
-        display: grid;
-        margin: auto;
         grid-template-columns: 1fr;
-        grid-template-rows: 300px 400px;
-        grid-gap: 40px;
-        justify-items: center;
-        }
+        gap: 2rem;
+    }
+    .about-index{
+        text-align: center;
+    }
+    .introduce .written{
+        order: 2;
+    }
+    .about-monogram{
+        order: 1;
+        max-width: 260px;
+        margin: 0 auto;
+    }
     .introduce .written .h2{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .section-kicker{
+        width: 100%;
+        text-align: center;
+    }
+    .about-disciplines{
+        justify-content: center;
+    }
+    .who{
         text-align: left;
-        font-size: 2.5rem;
-      }
-      .skill .container1{
-        display: grid;
+    }
+    .skill .container1{
         grid-template-columns: repeat(2,1fr);
-        grid-gap: 40px;
-        margin: 10%;
-        margin-top: 2%;
-      }
-      .edu .education{
-        padding-top: 1%;
-        height: 420px;
-      }
-      .education .dl{
-        padding: 5%;
-      }
-      .edu .vertical{
-        border-left: 3px solid rgb(232, 220, 220);
-        height: 400px;
-        position: absolute;
-        left: 12%;
-      }
- }
+    }
+    .edu .education{
+        padding: 1.5rem;
+    }
+}

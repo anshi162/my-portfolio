@@ -1,56 +1,70 @@
 import React from 'react'
 import './workstyles.css'
-import savi from '../images/savi.jpg'
-import { NavLink } from 'react-router-dom'
-import intro from '../images/intro.jpg'
-import intel from '../images/intell.jpg'
-import login from '../images/login.png'
+import intel from '../images/intelligent-farming.jpg'
+import llmcost from '../images/llm-cost.jpg'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
-const work = () => {
+const projects = [
+    {
+        number: '01',
+        category: 'AI / LLM',
+        title: 'LLM Cost & Routing Calculator',
+        description: 'A tool that models monthly LLM spend across providers, and shows how much smart routing and prompt caching can save.',
+        tags: ['Next.js', 'TypeScript', 'API cost modeling'],
+        href: 'https://llmcost-two.vercel.app/',
+        image: llmcost,
+        alt: 'LLM Cost and Routing Calculator cost comparison bars',
+        layout: 'wide',
+    },
+    {
+        number: '02',
+        category: 'Machine learning',
+        title: 'Intelligent Farming',
+        description: 'A machine-learning system that recommends the best crop for a field using its soil characteristics.',
+        tags: ['Machine learning', 'Crop prediction', 'Data analysis'],
+        href: 'https://github.com/anshi162/Intelligent_farming',
+        image: intel,
+        alt: 'intefarming',
+        layout: 'compact',
+    },
+]
+
+const Work = () => {
   return (
-    <div className='work' style={{backgroundImage:`url(${intro})`}}>
+    <div className='work ambient-bg'>
         <div className='name'>
-            <h1>My Personal   <span>Projects</span></h1>
-            Few projects developed by Me
+            <div className="eyebrow"><span className="dot"></span> Selected work</div>
+            <h1>My Personal <span>Projects</span></h1>
+            <p>A few projects developed by me</p>
         </div>
         <div className='proj-container'>
-        <div className='proj-card'>
-            <img src={savi} alt='savicare'/>
-            <h2 className='proj-title'> Savi-Care</h2>
-            <div className='proj-detail'>
-                <p>A website where user can search for nearby doctors with the type of
-                problem they have.</p>
+        {projects.map((project) => (
+            <article key={project.title} className={`proj-card proj-card--${project.layout}`}>
+                <div className="proj-topline">
+                    <span>{project.number}</span>
+                    <span className="proj-category">{project.category}</span>
+                </div>
+                <a href={project.href} target="_blank" rel="noreferrer" className="proj-visual" aria-label={`Open ${project.title}`}>
+                    <img src={project.image} alt={project.alt}/>
+                    <span className="visual-action" aria-hidden="true"><FaExternalLinkAlt size={13}/></span>
+                </a>
+                <h2 className='proj-title'>{project.title}</h2>
+                <div className='proj-detail'>
+                    <p>{project.description}</p>
+                </div>
+                <div className="proj-tags">
+                    {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
                 </div>
                 <div className='proj-btns'>
-                    <NavLink to="https://github.com/anshi162/savi-_care" className="btn">View</NavLink>
+                    <a href={project.href} target="_blank" rel="noreferrer" className="proj-link">
+                        View project <FaExternalLinkAlt size={11}/>
+                    </a>
                 </div>
+            </article>
+        ))}
         </div>
-        <div className='proj-card'>
-            <img src={intel} alt='intefarming'/>
-            <h2 className='proj-title'>Intelligent Farming</h2>
-            <div className='proj-detail'>
-                <p>Machine learning based system which predicts best kind of
-                crop suited for the type of soil</p>
-                </div>
-                <div className='proj-btns'>
-                    <NavLink to="https://github.com/anshi162/Intelligent_farming" className="btn">View</NavLink>
-                </div>
-        </div>
-        <div className='proj-card'>
-            <img src={login} alt='login'/>
-            <h2 className='proj-title'>Animated Login Page</h2>
-            <div className='proj-detail'>
-                <p>A login page created using Html, Css and Javascript in which button moves when
-                invalid input is provided.</p>
-                </div>
-                <div className='proj-btns'>
-                    <NavLink to="https://github.com/anshi162/animated_loginpage" className="btn">View</NavLink>
-                </div>
-        </div>
-        </div>
-      
     </div>
   )
 }
 
-export default work
+export default Work

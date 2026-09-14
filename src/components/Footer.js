@@ -1,12 +1,10 @@
 import "./Footerstyles.css";
 import React from 'react'
-import Introimg from "../images/intro.jpg";
-import Faceimg from "../images/face.png";
 import {Link} from "react-router-dom";
 const Footer = () => {
   return (
-    <div className="footer" style={{ backgroundImage:`url(${Introimg})`  }} >
-        
+    <div className="footer ambient-bg">
+        <div className="footer-panel glass">
         <div className="introduce">
             <div className="written">
                 <p className="h2">Let me introduce myself</p>
@@ -23,17 +21,15 @@ const Footer = () => {
                 </dl>
                 </div>
 
-            <div className="face">
-                <img src={Faceimg} alt="face"/>
+            <div className="about-monogram" aria-hidden="true">
+                <span>A</span><span>G</span>
             </div>
         </div>
 
         <div className="btndiv">
-         <Link to="/project" className="btn">Projects</Link>
+         <Link to="/project" className="btn btn-primary">Projects</Link>
         </div>
-     
-      
-      
+        </div>
     </div>
   )
 }

@@ -1,39 +1,156 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+/* ---------------------------------------------------------------
+   Design tokens -- dark glass theme.
+   Kept as plain CSS custom properties (no Tailwind) so every
+   existing component file can opt in with var(--token-name)
+   without a framework change.
+----------------------------------------------------------------*/
+:root {
+  --canvas: #11131b;
+  --canvas-raised: #171a24;
+  --ice: #e6e8f0;
+  --ice-dim: rgba(230, 232, 240, 0.62);
+  --ice-faint: rgba(230, 232, 240, 0.4);
+
+  --accent-cyan: #4ad6e5;
+  --accent-blue: #4c5fee;
+  --accent-green: #42d696;
+  --accent-warm: #c45a5f;
+
+  --glass-bg: linear-gradient(135deg, rgba(230, 232, 240, 0.09), rgba(230, 232, 240, 0.02));
+  --glass-border: rgba(230, 232, 240, 0.12);
+
+  --radius: 0.85rem;
+  --radius-pill: 999px;
+
+  --font-sans: 'Outfit', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+}
 
 *{
   box-sizing: border-box;
   margin:0;
   padding: 0;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-sans);
+}
+html{
+  scroll-behavior: smooth;
 }
 body{
-  background: black;
+  background: var(--canvas);
+  color: var(--ice);
 }
-h1,h4,p,a{
-  color:white;
+h1,h2,h3,h4,p,a{
+  color: var(--ice);
   text-decoration: none;
 }
-
 ul{
   list-style-type: none;
 }
-.btn{
-  padding: 12px 32px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  background: yellow;
-  color: black;
-  border: 1px solid white;
+
+::selection{
+  background: rgba(74, 214, 229, 0.3);
+}
+
+/* Ambient glow blobs -- reused behind any section via .ambient-bg */
+.ambient-bg{
+  position: relative;
+  overflow: hidden;
+}
+.ambient-bg::before,
+.ambient-bg::after{
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(110px);
+  pointer-events: none;
+  z-index: 0;
+}
+.ambient-bg::before{
+  width: 32rem;
+  height: 32rem;
+  left: -10rem;
+  top: -8rem;
+  background: rgba(76, 95, 238, 0.28);
+}
+.ambient-bg::after{
+  width: 28rem;
+  height: 28rem;
+  right: -8rem;
+  bottom: -6rem;
+  background: rgba(74, 214, 229, 0.16);
+}
+.ambient-bg > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* Shared glass surface */
+.glass{
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(22px) saturate(140%);
+  border-radius: var(--radius);
+}
+
+/* Eyebrow badge (small uppercase pill label) */
+.eyebrow{
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  border: 1px solid var(--glass-border);
+  background: rgba(230, 232, 240, 0.05);
+  border-radius: var(--radius-pill);
+  padding: .45rem .9rem;
+  color: var(--ice-dim);
+  font-size: .7rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+}
+.eyebrow .dot{
+  width: .45rem;
+  height: .45rem;
+  border-radius: 999px;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 16px var(--accent-cyan);
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .85rem 1.4rem;
+  border-radius: .6rem;
+  font-family: var(--font-display);
+  font-size: .95rem;
+  font-weight: 700;
+  border: none;
   cursor: pointer;
+  transition: transform .2s, box-shadow .2s, background .2s, color .2s;
+  text-transform: none;
+}
+.btn-primary{
+  background: var(--accent-cyan);
+  color: var(--canvas);
+}
+.btn-primary:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(74, 214, 229, 0.25);
 }
 .btn-light{
   background: transparent;
-  color: white;
-
+  color: var(--ice);
+  border: 1px solid var(--glass-border);
 }
-.btn:hover{
-  background: grey;
-  color:azure;
-  transition: 0.3 sec;
+.btn-light:hover{
+  background: rgba(230, 232, 240, 0.08);
+  transform: translateY(-2px);
+}
+/* Legacy alias kept so any un-migrated markup still renders sensibly */
+.btn:not(.btn-primary):not(.btn-light){
+  background: var(--accent-cyan);
+  color: var(--canvas);
 }

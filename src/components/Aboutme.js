@@ -1,7 +1,5 @@
 import React from 'react'
-import Introimg from '../images/intro.jpg'
 import './Aboutmestyle.css'
-import Faceimg from "../images/face.png";
 import {FaPython, FaDocker, FaGithub, FaBrain} from 'react-icons/fa'
 import {SiKubernetes, SiApachekafka, SiPostgresql, SiGrafana} from "react-icons/si"
 import {VscAzure} from "react-icons/vsc"
@@ -9,9 +7,11 @@ import {RiReactjsFill} from "react-icons/ri"
 
 const Aboutme = () => {
   return (
-    <div className='me' style={{ backgroundImage:`url(${Introimg})`}}  >
+    <div className='me ambient-bg'>
         <div className="introduce">
+            <div className="about-index">ABOUT ME</div>
             <div className="written">
+                <span className="section-kicker">A little context</span>
                 <p className="h2">Know who I'M</p>
                 <div className='who'>
                 <p >Hi Everyone, I am <span>Anshi Gupta</span></p>
@@ -21,9 +21,12 @@ const Aboutme = () => {
                 <p>My interests are in <span>Data Engineering, DevOps, and Generative AI</span> — I love building systems
                 that run reliably in production, not just work in a demo. Apart from work, I am a social worker and love binge watching shows.</p>
                 </div>
+                <div className="about-disciplines" aria-label="Areas of interest">
+                    <span>Data Engineering</span><span>DevOps</span><span>Generative AI</span>
                 </div>
-            <div className="face">
-                <img src={Faceimg} alt="face"/>
+                </div>
+            <div className="about-monogram" aria-hidden="true">
+                <span>A</span><span>G</span>
             </div>
         </div>
         <div className='skill'>
